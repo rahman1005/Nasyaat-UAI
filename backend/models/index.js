@@ -33,23 +33,23 @@ Object.keys(db).forEach(modelName => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-db.category = require("./categorys")(sequelize, Sequelize);
-db.event = require("./events")(sequelize, Sequelize);
-db.lembaga= require("./lembaga")
-db.category.hasMany(db.event, {as:"events"});
-db.event.belongTo(db.category,{
-  foriegnKey:"CategoryId",
-  as: "category",
-})
-db.category.hasMany(db.lembaga,{as:"lemabaga"});
-db.lembaga.belongTO(db.category,{
-  foriegnKey:"CategoryId",
-  as: "category",
-})
-db.lembaga.hasMany(db.event, {as:"events"});
-db.event.belongTo(db.lembaga,{
-  foriegnKey:"LemabagaId",
-  as: "lembaga",
-})
+// db.category = require("./categorys")(sequelize, Sequelize);
+// db.event = require("./events")(sequelize, Sequelize);
+// db.lembaga= require("./lembaga")
+// db.category.hasMany(db.event, {as:"events"});
+// db.event.belongTo(db.category,{
+//   foriegnKey:"CategoryId",
+//   as: "category",
+// })
+// // db.category.hasMany(db.lembaga,{as:"lemabaga"});
+// // db.lembaga.belongTO(db.category,{
+// //   foriegnKey:"CategoryId",
+// //   as: "category",
+// // })
+// db.lembaga.hasMany(db.event, {as:"events"});
+// db.event.belongTo(db.lembaga,{
+//   foriegnKey:"LemabagaId",
+//   as: "lembaga",
+// })
 
 module.exports = db;

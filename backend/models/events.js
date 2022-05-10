@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes)=>{
             allowNull: false
             },
 
-            nameEvnet:{
+            nameEvent:{
             type: DataTypes.STRING,
             allowNull: false
             },

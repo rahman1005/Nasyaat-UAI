@@ -12,7 +12,7 @@ module.exports = {
         
         },
         
-      nameEvnet:{
+      nameEvent:{
         type: Sequelize.STRING,
         allowNull: false
         
