@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+body {
+  /* untuk memformat bagian body */
+    font-family: Quicksand, sans-serif; 
+    margin: 0;
+   padding: 0;
+  
+ }
+ nav {
+  position: sticky;
+  padding: 10px;
+  top: 0;
+  z-index: 99 ; /*agar navigasi jadi elemen palign atas*/
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  background-color: white;
+}
+nav ul {
+  text-align:center;
+}
+nav li{
+  display: inline;
+  padding-left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+nav a {
+  text-decoration: none;
+  color: #082A5A;
+
+}
+nav a:hover {
+  text-decoration: none;
+
+}
+.button-logout{
+  border: none;
+  background-color: white;
+  color: #082A5A;
+  font-size: 20px;
+  font-weight: bold;
+}
+.button-logout:hover{
+  color: #2276B4;
+}
+/* style dashborad dan form */
+.form{
+  width: 70%;
+  margin: 50px auto;
+}
+.list{
+  width: 70%;
+  margin: 50px auto;
+}
+.form h1 {
+  color: #082A5A;
+  font-weight: bold;
+  text-align: center;
+}
+.tambah-event {
+  width: 150px;
+  height: 40px;
+  background-color: #082A5A;
+  border-radius: 10px;
+ 
+}
+.tambah-event h1{
+  font-size: 17px;
+  text-align: center;
+  padding-top: 10px;
+  font-weight: bold;
+}
+.list a{
+  text-decoration: none;
+  color: white;
+}
+
+.list-item{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #C4C4C4;
+  margin-top: 20px  ;
+  color: #082A5A;
+  height: 70px;
+ 
+}
+.action {
+  text-align: right;
+  padding: 15px 30px 0px 0px;
+  font-size: 30px;
+  font-weight: bold;
+  
+}
+.judul {
+  padding: 15px 0px 0px 30px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.list-item-event{
+  display: grid;
+  grid-template-columns: 6fr 1fr 1fr;
+  background-color: #eaeaea;
+  margin-top: 5px  ;
+  color: #082A5A;
+  height: 70px;
+}
+.judul-event{
+  font-size: 25px;
+  padding: 15px 0px 0px 30px;
+  color: black;
+  
+}
+.btn{
+  height: 40px;
+  width: 120px;
+  margin-top:15px;
+  border-radius: 10px;
+}
+.color-edit{
+  background-color: #F2D114;
+}
+.color-delete{
+  background-color: #F22F14;
+}
+.text-action{
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
