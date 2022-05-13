@@ -1,5 +1,39 @@
 <template>
   <div class="form-input">
+    <div>
+      <label for="formGroupExampleInput" class="form-label">Kategori</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio1"
+        value="option1"
+      />
+      <label class="form-check-label" for="inlineRadio1">UAI</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio2"
+        value="option2"
+      />
+      <label class="form-check-label" for="inlineRadio2">ORMAWA</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio2"
+        value="option2"
+      />
+      <label class="form-check-label" for="inlineRadio2">UKKM</label>
+    </div>
+    
     <div class="mb-3">
       <label for="formGroupExampleInput" class="form-label">Nama Event</label>
       <input
@@ -59,14 +93,13 @@
       />
     </div>
     <div class="form-floating">
-    <label for="floatingTextarea2">Deskripsi</label>
+      <label for="floatingTextarea2">Deskripsi</label>
       <textarea
         class="form-control"
         placeholder=""
         id="floatingTextarea2"
         style="height: 100px"
       ></textarea>
-     
     </div>
   </div>
 </template>

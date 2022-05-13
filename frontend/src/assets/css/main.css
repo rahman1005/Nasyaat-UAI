@@ -8,19 +8,20 @@ body {
  }
  nav {
   position: sticky;
-  padding: 10px;
   top: 0;
   z-index: 99 ; /*agar navigasi jadi elemen palign atas*/
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
   width: 100%;
   background-color: white;
+  height: 60px;
 }
 nav ul {
+  padding-top: 10px;
   text-align:center;
 }
 nav li{
   display: inline;
-  padding-left: 20px;
+  padding-left: 40px;
   font-size: 20px;
   font-weight: bold;
 }
