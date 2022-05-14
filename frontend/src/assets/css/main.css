@@ -127,3 +127,38 @@ nav a:hover {
   font-weight: bold;
   color: white;
 }
+
+/* All Events Style */
+  .All-Events h1{
+    text-align: center;
+    margin-top: 40px;
+    color: #082A5A;
+  }
+  .Card{
+    margin: 0 auto;
+    width: 80%;
+  }
+.card-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.card{
+  margin-bottom: 20px;
+  height: 650px;
+}
+.card img{
+  min-height: 400px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.card-title{
+  font-weight: bold;
+}
+.list-group-item{
+  overflow: hidden;
+  height: 60px;
+}
+.card-body{
+  height: 200px;
+}
