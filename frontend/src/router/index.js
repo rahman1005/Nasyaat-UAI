@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import Dashboardview from '../views/DashboardView.vue'
 import inputPostView from '../views/inputPost.vue'
 import AllEventsview from '../views/AllEvents.vue'
+import AboutView from '../views/AboutView.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
     path:'/allevents',
     name: 'allevents',
     component:AllEventsview
+  },
+  {
+    path:'/about',
+    name: 'about',
+    component:AboutView
   },
 ]
 
