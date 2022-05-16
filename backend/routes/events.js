@@ -5,6 +5,11 @@ const Validator = require('fastest-validator');
 const { event } = require('../models')
 const v = new Validator();
 
+router.get('/', async(req,res)=>{
+    const Events = await event.findAll();
+    return res.json(Events);
+});
+
 router.post('/', async(req, res) => {
     const schema ={
         nameEvent: 'string',
