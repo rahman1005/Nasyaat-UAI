@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Dashboardview from '../views/DashboardView.vue'
 import inputPostView from '../views/inputPost.vue'
+import AllEventsview from '../views/AllEvents.vue'
 
 Vue.use(VueRouter)
 
@@ -21,8 +22,12 @@ const routes = [
     path:'/inputpost',
     name: 'inputpost',
     component:inputPostView
-  }
-
+  },
+  {
+    path:'/allevents',
+    name: 'allevents',
+    component:AllEventsview
+  },
 ]
 
 const router = new VueRouter({
