@@ -44,8 +44,8 @@ nav a:hover {
 .button-logout:hover{
   color: #2276B4;
 }
-/* style dashborad dan form */
-.form{
+ /* style dashborad dan form */
+ .form{
   width: 70%;
   margin: 50px auto;
 }
@@ -59,7 +59,7 @@ nav a:hover {
   text-align: center;
 }
 .tambah-event {
-  width: 150px;
+  width: 170px;
   height: 40px;
   background-color: #082A5A;
   border-radius: 10px;
@@ -113,9 +113,21 @@ nav a:hover {
 }
 .btn{
   height: 40px;
-  width: 120px;
-  margin-top:15px;
+  width: 100px;
+  margin-top:5px;
   border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  color: white;
+}
+.btn:hover{
+  height: 40px;
+  width: 100px;
+  margin-top:5px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  color: white;
 }
 .color-edit{
   background-color: #F2D114;
@@ -123,10 +135,16 @@ nav a:hover {
 .color-delete{
   background-color: #F22F14;
 }
+
 .text-action{
   font-size: 20px;
   font-weight: bold;
   color: white;
+}
+.button-lembaga{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 30%;
 }
 
 /* All Events Style */

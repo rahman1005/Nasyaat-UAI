@@ -5,6 +5,7 @@ import Dashboardview from '../views/DashboardView.vue'
 import inputPostView from '../views/inputPost.vue'
 import AllEventsview from '../views/AllEvents.vue'
 import AboutView from '../views/AboutView.vue'
+import postLembaga from '../views/post-lembaga.vue'
 
 Vue.use(VueRouter)
 
@@ -23,6 +24,11 @@ const routes = [
     path:'/inputpost',
     name: 'inputpost',
     component:inputPostView
+  },
+  {
+    path:'/postlembaga',
+    name: 'postlembaga',
+    component:postLembaga
   },
   {
     path:'/allevents',

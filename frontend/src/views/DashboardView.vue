@@ -2,7 +2,10 @@
     <div class="Dashboard-home">
         <Navbar/>
         <main class="list">
-          <a href="/inputpost"> <div class="tambah-event"><h1>+Tambah Event</h1></div></a>
+        <div class="button-lembaga">
+            <a href="/inputpost"> <div class="tambah-event"><h1>+Tambah Event</h1></div></a>
+            <a href="/postlembaga"> <div class="tambah-event"><h1>+TambagLembaga</h1></div></a>
+        </div>
           <ListEvent/>
         </main>
     </div>

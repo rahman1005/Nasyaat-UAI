@@ -6,8 +6,10 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var eventsRouter = require('./routes/events')
-
+var eventsRouter = require('./routes/events');
+var alleventRouter = require('./routes/allevents');
+var category = require('./routes/category');
+var lembagaRouter = require('./routes/lembaga');
 var app = express();
 
 app.use(logger('dev'));
@@ -19,5 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/events', eventsRouter);
-
+app.use('/allevents',alleventRouter),
+app.use('/category',category);
+app.use('/lembaga',lembagaRouter);
 module.exports = app;
