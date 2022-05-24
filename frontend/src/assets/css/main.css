@@ -182,6 +182,14 @@ nav a:hover {
   height: 200px;
   color: black;
 }
+.routerlink{
+  text-decoration: none;
+  color: black;
+}
+.routerlink:hover{
+  text-decoration: none;
+  color: black;
+}
 
 /* style hero */
 .Hero{
@@ -321,14 +329,105 @@ nav a:hover {
 .fitur-item-dk p{
   padding-top: 30px;
 }
+/* detail event */
+.detail-event{
+  width: 80%;
+  margin: 30px auto;
+
+}
+.image-detail{
+  width: 100%;
+  margin: 20px auto;
+}
+.image-detail img{
+  width: 90%;
+}
+.event-detail-text{
+  padding:30px 0px 0px 20px;
+}
+.event-detail-text h1{
+  font-weight: bold;
+}
+.event-detail-text a{
+  text-decoration: none;
+  color: white;
+}
+.text-distance{
+  padding-top:20px ;
+}
+.text-distance h2{
+  font-size: 20px;
+}
+.daftar{
+  background-color: #082A5A;
+  width: 70px;
+}
+.instagram a{
+  text-decoration: none;
+  color: black;
+}
+.deskripsi{
+  text-align: justify;
+  width: 90%;
+}
+
+/* login */
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.color-login{
+  background-color:#082A5A;
+  color: white;
+}
+.login-body{
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.login-padding{
+  padding: 30px;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
 @media screen and (min-width: 700px){
   .Hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-  }
-  .Hero h1{
-      font-size: 50px;
- }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.Hero h1{
+    font-size: 50px;
+}
+.detail-event{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+}
+.event-detail-text {
+padding:50px 0px 0px 100px;
+}
+.text-distance h2{
+font-size: 40px;
+}
+.detail-event{
+width: 70%;
+margin: 30px auto;
+box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+border-radius: 10px;
+
+}
+.image-detail{
+width: 90%;
+margin: 30px auto;
+}
   
 }
 @media screen and ( max-width: 699px){

@@ -10,6 +10,7 @@ var eventsRouter = require('./routes/events');
 var alleventRouter = require('./routes/allevents');
 var category = require('./routes/category');
 var lembagaRouter = require('./routes/lembaga');
+var admin = require('./routes/admin');
 var app = express();
 
 app.use(logger('dev'));
@@ -25,4 +26,5 @@ app.use('/events', eventsRouter);
 app.use('/allevents',alleventRouter),
 app.use('/category',category);
 app.use('/lembaga',lembagaRouter);
+app.use('/admin',admin);
 module.exports = app;

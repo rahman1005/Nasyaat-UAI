@@ -1,5 +1,9 @@
 <template>
+
   <div class="input-lembaga" v-on:submit.prevent>
+    <div>
+        <label for="formGroupExampleInput" class="form-label">Category</label>
+    </div>
     <div
       class="form-check form-check-inline"
       v-for="category in categorys"
@@ -26,7 +30,7 @@
         type="text"
         class="form-control"
         id="formGroupExampleInput"
-        placeholder="Contoh: MILAD NASYAAT UAI"
+        placeholder="Contoh: HMIF"
         v-model="lembaga.lembagaName"
         required
       />
@@ -49,10 +53,10 @@
         >Email Lembaga</label
       >
       <input
-        type="text"
+        type="email"
         class="form-control"
         id="formGroupExampleInput2"
-        placeholder="www.form.com"
+        placeholder="nasyaat@gmail.com"
         v-model="lembaga.emailLembaga"
         required
       />

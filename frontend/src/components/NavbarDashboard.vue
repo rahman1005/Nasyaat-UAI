@@ -3,7 +3,7 @@
          <nav>
             <ul>
                 <li><a href="/dashboard">All Event</a></li>
-                <li ><button class="button-logout" >Log out</button></li>
+                <li ><a href="/"><button class="button-logout" >Log out</button></a></li>
                 
             </ul>
         </nav>

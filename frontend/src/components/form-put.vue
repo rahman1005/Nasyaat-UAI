@@ -1,12 +1,12 @@
 <template>
 <div class="form-input" v-on:submit.prevent>
   <div class="mb-3">
-      <label for="formGroupExampleInput" class="form-label">Nama Lembaga</label>
+      <label for="formGroupExampleInput" class="form-label">Nama Penyelenggara</label>
       <input
         type="text"
         class="form-control"
         id="formGroupExampleInput"
-        placeholder="Contoh: MILAD NASYAAT UAI"
+        placeholder="Contoh: PANITIA HISTORIZ"
         v-model="event.lembagaName"
         required
         action="/action_page.php"
@@ -44,7 +44,6 @@
         type="date"
         class="form-control"
         id="formGroupExampleInput2"
-        placeholder="www.form.com"
         v-model="event.tanggal"
         required
         action="/action_page.php"
@@ -58,7 +57,6 @@
         type="time"
         class="form-control"
         id="formGroupExampleInput2"
-        placeholder="www.form.com"
         v-model="event.waktu"
         required
         action="/action_page.php"

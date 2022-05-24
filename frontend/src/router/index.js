@@ -7,6 +7,8 @@ import AllEventsview from '../views/AllEvents.vue'
 import AboutView from '../views/AboutView.vue'
 import postLembaga from '../views/post-lembaga.vue'
 import formput from '../views/from-PutLembaga.vue'
+import loginadmin from"../views/login.vue"
+import detailEvent from '../views/eventdetail.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -41,9 +43,19 @@ const routes = [
     component:AboutView
   },
   {
+    path:'/detailevent/:eventId',
+    name: 'detailevent',
+    component:detailEvent
+  },
+  {
     path:'/putevent/:eventId',
     name: 'putevent',
     component:formput
+  },
+  {
+    path:'/login',
+    name: 'login-admin',
+    component:loginadmin
   },
 ]
 

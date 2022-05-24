@@ -1,5 +1,6 @@
 <template>
   <div class="form-input" v-on:submit.prevent>
+      <label for="formGroupExampleInput" class="form-label">Lembaga</label>
     <div>
      <div
       class="form-check form-check-inline"
@@ -19,7 +20,9 @@
       <label class="form-check-label" for="inlineRadio2">{{lembaga.lembagaName}}</label>
     </div>
   </div> 
+   <label for="formGroupExampleInput" class="form-label">Category</label>
   <div>
+    
     <div
       class="form-check form-check-inline"
       v-for="category in categorys"
@@ -41,12 +44,12 @@
     </div>
   </div>
   <div class="mb-3">
-      <label for="formGroupExampleInput" class="form-label">Nama Lembaga</label>
+      <label for="formGroupExampleInput" class="form-label">Nama Penyelengara</label>
       <input
         type="text"
         class="form-control"
         id="formGroupExampleInput"
-        placeholder="Contoh: MILAD NASYAAT UAI"
+        placeholder="Contoh: PANITIA HISTORIZ"
         v-model="event.lembagaName"
         required
         action="/action_page.php"
@@ -58,7 +61,7 @@
         type="text"
         class="form-control"
         id="formGroupExampleInput"
-        placeholder="Contoh: MILAD NASYAAT UAI"
+        placeholder="Contoh: HISTORIZ"
         v-model="event.nameEvent"
         required
         action="/action_page.php"
@@ -84,7 +87,6 @@
         type="date"
         class="form-control"
         id="formGroupExampleInput2"
-        placeholder="www.form.com"
         v-model="event.tanggal"
         required
         action="/action_page.php"
@@ -98,7 +100,6 @@
         type="time"
         class="form-control"
         id="formGroupExampleInput2"
-        placeholder="www.form.com"
         v-model="event.waktu"
         required
         action="/action_page.php"
@@ -124,7 +125,6 @@
         type="file"
         class="form-control"
         id="formGroupExampleInput2"
-        placeholder="www.image.com"
         @change="onImageselect"
         required
         action="/action_page.php"
