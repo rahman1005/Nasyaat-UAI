@@ -6,7 +6,7 @@ import inputPostView from '../views/inputPost.vue'
 import AllEventsview from '../views/AllEvents.vue'
 import AboutView from '../views/AboutView.vue'
 import postLembaga from '../views/post-lembaga.vue'
-
+import formput from '../views/from-PutLembaga.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -39,6 +39,11 @@ const routes = [
     path:'/about',
     name: 'about',
     component:AboutView
+  },
+  {
+    path:'/putevent/:eventId',
+    name: 'putevent',
+    component:formput
   },
 ]
 
