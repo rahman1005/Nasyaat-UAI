@@ -110,6 +110,7 @@ export default {
     }
       console.warn(this.lembaga);
       e.preventDefault();
+     alert("data berhasil disimpan")
     },
   },
   mounted() {

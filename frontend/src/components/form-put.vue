@@ -176,6 +176,7 @@ export default {
                   "Content-Type": "multipart/form-data",
         },
       })
+      alert("data berhasil disimpan")
     }else{
         alert("data tdak boleh kosong")
     }
