@@ -18,10 +18,10 @@
                      <h2><b-icon-alarm-fill variant="info"></b-icon-alarm-fill>  {{events.waktu}}</h2>
                  </div>
                  <div class="text-distance instagram">
-                     <a :href="events.link_instagram"><h2><b-icon-instagram variant="info"></b-icon-instagram> Instagram</h2></a>
+                     <a :href="events.link_instagram" target="_blank"><h2><b-icon-instagram variant="info" ></b-icon-instagram> Instagram</h2></a>
                  </div>
                  <div class="text-distance">
-                    <a class="btn btn-primary" :href="events.link_pendaftaran" role="button">Daftar</a>
+                    <a class="btn btn-primary" :href="events.link_pendaftaran" target="_blank" role="button">Daftar</a>
                  </div>
                  <div class="text-distance deskripsi">
                      <p>{{events.deskripsi}}</p>
