@@ -177,6 +177,7 @@ export default {
         },
       })
       alert("data berhasil disimpan")
+        this.$router.push({path: "/dashboard"})
     }else{
         alert("data tdak boleh kosong")
     }

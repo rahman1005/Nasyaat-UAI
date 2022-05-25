@@ -105,12 +105,14 @@ export default {
       this.lembaga.emailLembaga &&
       this.lembaga.password !=null){
       axios.post("http://localhost:3000/lembaga",this.lembaga);
+          alert("data berhasil disimpan")
+          this.$router.push({path: "/dashboard"})
       } else{
         alert("data tdak boleh kosong")
     }
       console.warn(this.lembaga);
       e.preventDefault();
-     alert("data berhasil disimpan")
+ 
     },
   },
   mounted() {
