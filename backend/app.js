@@ -11,9 +11,6 @@ var alleventRouter = require('./routes/allevents');
 var category = require('./routes/category');
 var lembagaRouter = require('./routes/lembaga');
 var admin = require('./routes/admin');
-var eventUai = require('./routes/eventUAI');
-var eventOrmawa = require('./routes/eventORMAWA');
-var eventUkkm =require('./routes/eventUKKM');
 var app = express();
 
 app.use(logger('dev'));
@@ -30,7 +27,4 @@ app.use('/allevents',alleventRouter),
 app.use('/category',category);
 app.use('/lembaga',lembagaRouter);
 app.use('/admin',admin);
-app.use('/eventuai', eventUai);
-app.use('/eventormawa', eventOrmawa);
-app.use('/eventukkm', eventUkkm);
 module.exports = app;
