@@ -14,7 +14,7 @@
         type="radio"
         name="inlineRadioOptions"
         id="inlineRadio2"
-        :value="category.CategoryId"
+        :value="category.id"
         v-model="lembaga.categoryId"
         required
       />
@@ -35,28 +35,15 @@
         required
       />
     </div>
-    <!-- <div class="mb-3">
-      <label for="formGroupExampleInput2" class="form-label">Category Id</label>
-      <input
-        type="number"
-        step="1"
-        pattern="\d+"
-        onchange="this.value = parseInt(this.value);"
-        class="form-control"
-        id="formGroupExampleInput2"
-        placeholder="Contoh: Auditorium Arifin Panigoro"
-        v-model="lembaga.categoryId"
-      />
-    </div> -->
     <div class="mb-3">
       <label for="formGroupExampleInput2" class="form-label"
         >Email Lembaga</label
       >
       <input
-        type="email"
+        type="text"
         class="form-control"
         id="formGroupExampleInput2"
-        placeholder="nasyaat@gmail.com"
+        placeholder="www.form.com"
         v-model="lembaga.emailLembaga"
         required
       />
@@ -87,10 +74,11 @@ export default {
     return {
       categorys: {},
       lembaga: {
-       lembagaName:null,
-        categoryId:null,
-        emailLembaga:null,
-        password:null,
+      lembagaName:null,
+      categoryId:null,
+      emailLembaga:null,
+      password:null
+
       },
     };
   },
@@ -104,7 +92,7 @@ export default {
       this.lembaga.categoryId &&
       this.lembaga.emailLembaga &&
       this.lembaga.password !=null){
-      axios.post("http://localhost:3000/lembaga",this.lembaga);
+      axios.post("http://localhost:5000/lembaga",this.lembaga);
           alert("data berhasil disimpan")
           this.$router.push({path: "/dashboard"})
       } else{
@@ -117,7 +105,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:3000/category")
+      .get("http://localhost:5000/category")
       .then((response) => this.setCategory(response.data))
       .catch((error) => console.log(error));
   },

@@ -2,11 +2,11 @@
   <div class="card  " style="width: 18rem">
   <img
       class="card-img-top"
-      :src="'http://localhost:3000/'+event.Image"
+      :src="'http://localhost:5000/'+event.Image"
       alt="Card image cap"
     />
     <div class="card-body">
-      <h5 class="card-title"> <router-link class="routerlink" :to="'/detailevent/' +event.eventId">{{event.nameEvent}}</router-link></h5>
+      <h5 class="card-title"> <router-link class="routerlink" :to="'/detailevent/'+event.id">{{event.nameEvent}}</router-link></h5>
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">Penyelenggara :{{event.lembagaName}}</li>

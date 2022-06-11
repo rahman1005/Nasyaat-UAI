@@ -5,14 +5,14 @@
      <div
       class="form-check form-check-inline"
       v-for="lembaga in lembagas"
-      :key="lembaga.LembagaId"
+      :key="lembaga.id"
     >
       <input
         class="form-check-input"
         type="radio"
         name="lembaga"
         id="inlineRadio2"
-        :value="lembaga.LembagaId"
+        :value="lembaga.id"
         v-model="event.lembagaId"
         required
         action="/action_page.php"
@@ -26,14 +26,14 @@
     <div
       class="form-check form-check-inline"
       v-for="category in categorys"
-      :key="category.CategoryId"
+      :key="category.id"
     >
       <input
         class="form-check-input"
         type="radio"
         name="category"
         id="inlineRadio2"
-        :value="category.CategoryId"
+        :value="category.id"
         v-model="event.CategoryId"
         required
         action="/action_page.php"
@@ -100,7 +100,20 @@
         type="time"
         class="form-control"
         id="formGroupExampleInput2"
-        v-model="event.waktu"
+        v-model="event.waktu_mulai"
+        required
+        action="/action_page.php"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="formGroupExampleInput2" class="form-label"
+        >Waktu</label
+      >
+      <input
+        type="time"
+        class="form-control"
+        id="formGroupExampleInput2"
+        v-model="event.waktu_selesai"
         required
         action="/action_page.php"
       />
@@ -180,7 +193,8 @@ export default {
            link_pendaftaran:null,
            link_instagram:null,
            tanggal:null,
-           waktu:null,
+           waktu_mulai:null,
+           waktu_selesai:null,
            tempat:null,
            deskripsi:null,
       },
@@ -203,7 +217,8 @@ export default {
     this.event.nameEvent && 
     this.event.lembagaName && 
     this.event.tanggal &&
-    this.event.waktu &&
+    this.event.waktu_mulai &&
+    this.event.waktu_selesai &&
     this.event.link_pendaftaran &&
     this.event.link_instagram &&
     this.event.tempat &&
@@ -218,11 +233,12 @@ export default {
       fd.append('link_pendaftaran', this.event.link_pendaftaran)
       fd.append('link_instagram', this.event.link_instagram)
       fd.append('tanggal', this.event.tanggal)
-      fd.append('waktu', this.event.waktu)
+      fd.append('waktu_mulai', this.event.waktu_mulai)
+      fd.append('waktu_selesai', this.event.waktu_selesai)
       fd.append('tempat', this.event.tempat)
       fd.append('deskripsi', this.event.deskripsi)
       
-      axios.post("http://localhost:3000/events", fd,  {
+      axios.post("http://localhost:5000/events", fd,  {
               headers: {
                   "Content-Type": "multipart/form-data",
         },
@@ -238,12 +254,12 @@ export default {
   },
   mounted(){
     axios
-    .get("http://localhost:3000/lembaga")
+    .get("http://localhost:5000/lembaga")
     .then((response)=> this.setLembaga(response.data))
     .catch((error)=> console.log(error));
     
      axios
-      .get("http://localhost:3000/category")
+      .get("http://localhost:5000/category")
       .then((response) => this.setCategory(response.data))
       .catch((error) => console.log(error));
   }

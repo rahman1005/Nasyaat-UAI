@@ -49,7 +49,7 @@
         action="/action_page.php"
       />
     </div>
-      <div class="mb-3">
+            <div class="mb-3">
       <label for="formGroupExampleInput2" class="form-label"
         >Waktu</label
       >
@@ -57,7 +57,20 @@
         type="time"
         class="form-control"
         id="formGroupExampleInput2"
-        v-model="event.waktu"
+        v-model="event.waktu_mulai"
+        required
+        action="/action_page.php"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="formGroupExampleInput2" class="form-label"
+        >Waktu</label
+      >
+      <input
+        type="time"
+        class="form-control"
+        id="formGroupExampleInput2"
+        v-model="event.waktu_selesai"
         required
         action="/action_page.php"
       />
@@ -135,7 +148,8 @@ export default {
            link_pendaftaran:null,
            link_instagram:null,
            tanggal:null,
-           waktu:null,
+           waktu_mulai:null,
+           waktu_selesai:null,
            tempat:null,
            deskripsi:null,
       },
@@ -154,7 +168,8 @@ export default {
     this.event.nameEvent && 
     this.event.lembagaName && 
     this.event.tanggal &&
-    this.event.waktu &&
+    this.event.waktu_mulai &&
+    this.event.waktu_selesai &&
     this.event.link_pendaftaran &&
     this.event.link_instagram &&
     this.event.tempat &&
@@ -167,11 +182,12 @@ export default {
       fd.append('link_pendaftaran', this.event.link_pendaftaran)
       fd.append('link_instagram', this.event.link_instagram)
       fd.append('tanggal', this.event.tanggal)
-      fd.append('waktu', this.event.waktu)
+      fd.append('waktu_mulai', this.event.waktu_mulai)
+      fd.append('waktu_selesai', this.event.waktu_selesai)
       fd.append('tempat', this.event.tempat)
       fd.append('deskripsi', this.event.deskripsi)
      
-      axios.put("http://localhost:3000/events/"+this.$route.params.eventId, fd,  {
+      axios.put("http://localhost:5000/events/"+this.$route.params.id, fd,  {
               headers: {
                   "Content-Type": "multipart/form-data",
         },
@@ -187,7 +203,7 @@ export default {
     },
     mounted(){
         axios
-        .get("http://localhost:3000/events/" )
+        .get("http://localhost:5000/events/" )
         .then((response)=> this.setEvent(response.data))
         .catch((error)=>console.log(error));
         console.warn(this.events);

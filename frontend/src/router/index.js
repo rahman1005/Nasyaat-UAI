@@ -9,6 +9,9 @@ import postLembaga from '../views/post-lembaga.vue'
 import formput from '../views/from-PutLembaga.vue'
 import loginadmin from"../views/login.vue"
 import detailEvent from '../views/eventdetail.vue'
+import eventuai from '../views/eventUAI.vue'
+import eventOrmawa from '../views/eventOrmawa.vue'
+import eventUkkm from '../views/eventUkkm.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -38,17 +41,32 @@ const routes = [
     component:AllEventsview
   },
   {
+    path:'/eventsuai',
+    name: 'eventsuai',
+    component:eventuai
+  },
+  {
+    path:'/eventsormawa',
+    name: 'eventsormawa',
+    component:eventOrmawa
+  },
+  {
+    path:'/eventsukkm',
+    name: 'eventsukkm',
+    component:eventUkkm
+  },
+  {
     path:'/about',
     name: 'about',
     component:AboutView
   },
   {
-    path:'/detailevent/:eventId',
+    path:'/detailevent/:id',
     name: 'detailevent',
     component:detailEvent
   },
   {
-    path:'/putevent/:eventId',
+    path:'/putevent/:id',
     name: 'putevent',
     component:formput
   },
