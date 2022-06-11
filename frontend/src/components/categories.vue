@@ -10,22 +10,22 @@
                    <a href="/eventsormawa"><h2>Events ORMAWA</h2></a> 
                 </div>
                 <div class="category-item item-color-3">
-                   <a href="/eventukkm"><h2>Events UKKM</h2></a> 
+                   <a href="/eventsukkm"><h2>Events UKKM</h2></a> 
                 </div>
             </div>
         </div>
         <div class="d-none d-md-block">
             <div class="category-list-dk">
                 <div class="category-item-dk item-color-1">
-                   <a href="/events_uai"><div><img src="../assets/img/category.png" alt=""></div></a> 
+                   <a href="/eventsuai"><div><img src="../assets/img/category.png" alt=""></div></a> 
                     <h2>Events UAI</h2>
                 </div>
                 <div class="category-item-dk item-color-2">
-                    <a href="/event_ormawa"><div><img src="../assets/img/category.png" alt=""></div></a>
+                    <a href="/eventsormawa"><div><img src="../assets/img/category.png" alt=""></div></a>
                     <h2>Events ORMAWA</h2>
                 </div>
                 <div class="category-item-dk item-color-3">
-                     <a href="/event_ukkm"><div><img src="../assets/img/category.png" alt=""></div></a>
+                     <a href="/eventsukkm"><div><img src="../assets/img/category.png" alt=""></div></a>
                     <h2>Events UKKM</h2>
                 </div>
             </div>

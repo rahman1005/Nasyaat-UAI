@@ -4,7 +4,7 @@
       <div class="event-detail-body">
          <div class="detail-event">
             <div class="image-detail">
-             <img :src="'http://localhost:3000/'+events.Image">
+             <img :src="'http://localhost:5000/'+events.Image">
              </div>
              <div class="event-detail-text">
                  <h1>{{events.nameEvent}}</h1>
@@ -53,7 +53,7 @@ export default {
     },
     mounted(){
         axios
-        .get("http://localhost:3000/events/"+ this.$route.params.eventId)
+        .get("http://localhost:5000/events/"+ this.$route.params.id)
         .then((response)=> this.setEvent(response.data))
         .catch((error)=>console.log(error));
         console.warn(this.events);

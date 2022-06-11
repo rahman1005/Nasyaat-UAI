@@ -11,7 +11,7 @@ router.get('/', async(req,res) =>{
     });
     return res.json(Category);
 });
-router.post('/', async(req, res) => {
+router.post ('/', async(req, res) => {
     const schema ={
         categoryName: 'string',
        

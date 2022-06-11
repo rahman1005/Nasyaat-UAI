@@ -1,7 +1,7 @@
 <template>
-    <div class="All-Events">
+    <div class="event">
         <Navbar/>
-        <h1>All Events</h1>
+        <h1>Events UAI</h1>
         <div class= "Card row ">
             <div class="card-list col-md-3 mt-4 "  v-for="event in events.events" :key="event.id">
                 <Card :event="event"/>
@@ -33,7 +33,7 @@ export default {
     },
     mounted(){
         axios
-        .get("http://localhost:5000/events")
+        .get("http://localhost:5000/eventsuai")
         .then((response)=> this.setEvents(response.data))
         .catch((error)=> console.log(error));
 
