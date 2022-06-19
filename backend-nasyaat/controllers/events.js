@@ -8,6 +8,19 @@ export const getEvents = async (req, res) => {
         console.log(error)
     }
 };
+export const getEventsByLembaga = async (req, res)=>{
+    const lembagaId = req.params.lembagaId
+    try{
+        const events = await Events.findAll({
+            where:{
+                lembagaId:lembagaId
+            }
+        });
+        res.json(events)
+    }catch(error){
+        console.log(error);
+    }
+};
 export const getEventsByUAI = async (req, res) => {
     try {
         const events = await Events.findAll({

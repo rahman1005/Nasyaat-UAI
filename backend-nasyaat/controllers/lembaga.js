@@ -8,6 +8,19 @@ export const getLembaga = async (req, res)=>{
         console.log(error)
     }
 };
+export const getLembagaByemail = async (req, res)=>{
+    const email = req.params.emailLembaga
+    try{
+        const lembaga = await Lembaga.findAll({
+            where:{
+                emailLembaga:email
+            }
+        })
+        res.json(lembaga)
+    }catch(error){
+        console.log(error)
+    }
+}
 export const postLembaga = async (req, res)=>{
     const { lembagaName, categoryId, emailLembaga, password} = req.body;
     try{

@@ -1,6 +1,6 @@
 import express from "express";
 import { getUsers, Register, Login, Logout } from "../controllers/Users.js";
-import { getLembaga, postLembaga, putLembaga, deleteLembaga} from "../controllers/lembaga.js";
+import { getLembaga, postLembaga, putLembaga, deleteLembaga, getLembagaByemail} from "../controllers/lembaga.js";
 import { getCategory,postCategory, putCategory, deleteCategory } from "../controllers/category.js";
 import { getEvents, postEvent,getEventById, putEvent, deleteEvent, getEventsByUAI, getEventsByORMAWA, getEventsByUKKM} from "../controllers/events.js";
 import { getAdmin,postAdmin } from "../controllers/admin.js";
@@ -42,7 +42,7 @@ router.post('/events', upload.single('Image'), postEvent);
 router.put('/events/:id', upload.single('Image'), putEvent);
 router.get('/admin', getAdmin);
 router.post('/admin',postAdmin);
-
+router.get('/lembaga/:emailLembaga', getLembagaByemail);
 
 
 export default router;
